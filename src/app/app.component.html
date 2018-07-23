@@ -1,10 +1,15 @@
 <h3> Welcome to {{ title }} </h3>
 
-<form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value)">
-    <label>Name</label><input type="text" formControlName="name">
-    <label>Date</label><input type="text" formControlName="date">
-    <label>Assigned</label><input type="text" formControlName="assigned">
-    <button type="submit" [disabled]="!myForm.valid">
+<p>Please enter a Task Name, a Date in MM/DD/YYYY format, and an Assignee Name.</p>
+
+<form id="taskManagementForm" [formGroup]="taskManagementForm" novalidate (ngSubmit)="save(taskManagementForm.value)">
+    <label>Name</label>
+    <div><input type="text" formControlName="name"></div>
+    <label>Date</label>
+    <div><input type="text" formControlName="date"></div>
+    <label>Assigned</label>
+    <div><input type="text" formControlName="assigned"></div>
+    <button type="submit" [disabled]="!taskManagementForm.valid">
         Submit
     </button>
 </form>

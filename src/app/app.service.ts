@@ -16,12 +16,6 @@ export class AppService {
       .catch(this.handleError);
   }
 
-//   putNewTask(data) {
-//       return this._http.post('assets/api/tasks.json', data)
-//         .do(data => console.log('All; ' + JSON.stringify(data)))
-//         .catch(this.handleError);
-//   }
-
   private handleError(error: Response) {
     console.log(error);
     return Observable.throw(error.json().error || 'Server error');

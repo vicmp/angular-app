@@ -1,0 +1,11 @@
+#taskManagementForm div {
+    padding-bottom: 20px;
+}
+
+#taskManagementForm {
+    padding-bottom: 40px;
+}
+
+input {
+    width: 300px;
+}
